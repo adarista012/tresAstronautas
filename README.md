@@ -4,7 +4,7 @@ This is an application to apply for the position of developer in flutter in Tres
 
 this version use `null safety` and `flutter_meedu` as state management.
 
-![](images/screen1.png)
+![](images/screens/screen1.png)
 
 ## how to run the project.
 
