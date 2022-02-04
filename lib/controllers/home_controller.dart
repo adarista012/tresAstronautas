@@ -41,7 +41,7 @@ class HomeController extends SimpleNotifier {
   void reloadGrid(int n, List<List<int>> m) {
     _rc = false;
 
-    //createGrid(n, m);
+    createGrid(n, m);
 
     notify();
   }

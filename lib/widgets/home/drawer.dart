@@ -11,11 +11,11 @@ class DrawerT extends StatelessWidget {
   // ignore: avoid_renaming_method_parameters
   Widget build(_) {
     return Drawer(child: Consumer(builder: (_, ref, __) {
-      final controller = ref.watch(themeProvider);
+      final controller = ref.watch(themeProvider.select((_) => _.darkTheme));
       return Center(
         child: MaterialButton(
           onPressed: () {
-            controller.changeTheme();
+            themeProvider.read.changeTheme();
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

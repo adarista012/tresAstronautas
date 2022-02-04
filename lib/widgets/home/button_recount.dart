@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:islas/controllers/home/home_controller.dart';
+import 'package:islas/controllers/home/home_provider.dart';
 
 class ButtonRecount extends StatelessWidget {
   const ButtonRecount({
     Key? key,
-    required this.controller,
   }) : super(key: key);
-
-  final HomeController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +14,7 @@ class ButtonRecount extends StatelessWidget {
       //Colors.green.shade300,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
       onPressed: () {
-        controller.recount();
+        homeProvider.read.recount();
       },
       child: Text(
         'Recount Islands',

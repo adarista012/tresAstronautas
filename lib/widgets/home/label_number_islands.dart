@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:islas/controllers/home/home_controller.dart';
 
 class LabelNumberIslands extends StatelessWidget {
   const LabelNumberIslands({
     Key? key,
-    required this.controller,
+    required this.number,
   }) : super(key: key);
 
-  final HomeController controller;
+  final int number;
 
   @override
   Widget build(BuildContext context) {
@@ -15,16 +14,16 @@ class LabelNumberIslands extends StatelessWidget {
       color: Colors.grey.shade200,
       padding: const EdgeInsets.all(16.0),
       child: Center(
-          child: controller.count > 1
+          child: number > 1
               ? Text(
-                  '${controller.count} islands',
+                  '$number islands',
                   style: TextStyle(
                     color: Colors.blue.shade600,
                     fontWeight: FontWeight.bold,
                   ),
                 )
               : Text(
-                  '${controller.count} island',
+                  '$number island',
                   style: TextStyle(
                       color: Colors.blue.shade600, fontWeight: FontWeight.bold),
                 )),
